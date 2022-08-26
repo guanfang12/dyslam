@@ -10,21 +10,21 @@ This paper proposes a real-time semantic RGB-D slam system for dynamic environme
 
 1.This paper uses instance segmentation network named YOLACT_edge, uses TensorRT technology to compress, and optimize the network, and successfully realizes the processing speed of 27fps on the 1050ti computing platform. 
 
-<img src="../../.config/Typora/typora-user-images/image-20220826102438079.png" alt="image-20220826102438079" style="zoom:50%;" />
+<img src="images/1.png" alt="image-20220826102438079" style="zoom:50%;" />
 
 2.This paper proposes an effective geometric module, which divides the depth image into a few regions by using the region growth segmentation algorithm. The module can effectively improve the problem of incomplete mask coverage, eliminate the errors caused by the inconsistent sampling time of visual image and depth image in RGB-D camera, and identify the dynamic regions via their reprojection errors. 
 
-<img src="../../.config/Typora/typora-user-images/image-20220826103030581.png" alt="image-20220826103030581" style="zoom:80%;" />
+<img src="images/2.png" alt="image-20220826103030581" style="zoom:80%;" />
 
-<img src="../../.config/Typora/typora-user-images/image-20220826102502254.png" alt="image-20220826102502254" style="zoom: 80%;" />
+<img src="images/3.png" alt="image-20220826102502254" style="zoom: 80%;" />
 
-<img src="../../.config/Typora/typora-user-images/image-20220826102520429.png" alt="image-20220826102520429" style="zoom:80%;" />
+<img src="images/4png" alt="image-20220826102520429" style="zoom:80%;" />
 
 3.This paper adds the semantic information and region segmentation mask into the VSLAM system to screen the dynamic features in real time, and establishes the yolact-slam. The algorithm achieves the real-time effect of 18fps on 1050Ti. In the dynamic scene sequence of the data set TUM-RGBD, the absolute trajectory errors of the system are far lower than those of the general VSLAM system (ORB-SLAM2), and the RMSE is within 3.5cm. 
 
-![Screenshot from 2022-08-26 10-28-33](../../Pictures/Screenshot from 2022-08-26 10-28-33.png)
+![Screenshot from 2022-08-26 10-28-33](images/5png)
 
-![image-20220826103003503](../../.config/Typora/typora-user-images/image-20220826103003503.png)
+![image-20220826103003503](images/6.png)
 
 ## Getting Started
 
