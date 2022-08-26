@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+
+<!-- <node pkg="yolact_ros" type="pub_images.py" name="pub_images" output="screen" > -->
+<!-- </node> -->
+
+<node pkg="yolact_ros" type="node_wxl.py" name="yolact_ros" output="screen">
+  <param name="model_path" value="$(find yolact_ros)/scripts/weights/yolact_plus_resnet50_54_800000.pth" />
+  <!-- <param name="image_topic" value="/camera/rgb/image_raw" /> -->
+  <param name="use_compressed_image" value="False" />
+  <param name="publish_visualization" value="True" />
+  <param name="publish_detecitons" value="True" />
+  <param name="display_visualization" value="False" />
+</node>
+<!-- /camera/rgb/image_raw -->
+<!-- /image_view/image_raw -->
+</launch>

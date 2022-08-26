@@ -1,0 +1,5 @@
+string rgb_path
+sensor_msgs/Image rgb
+---
+sensor_msgs/Image frame
+yolact_ros/Detection[] detections

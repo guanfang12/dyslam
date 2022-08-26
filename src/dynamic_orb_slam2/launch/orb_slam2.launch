@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<launch>
+
+<!-- <node pkg="yolact_ros" type="pub_images.py" name="pub_images" output="screen" > -->
+<!-- </node> -->
+
+<node pkg="dynamic_orb_slam2" type="rgbd_tum" name="RGB_D" output="screen">
+  <param name="confThreshold" value="0.08" />
+  <param name="maskThreshold" value="0.3" />
+  <param name="voc_path" value="/home/wxl/ZJU/ORB-SLAM2/ORB_SLAM2-master/Vocabulary/ORBvoc.txt" />
+  <param name="setting_path" value="/home/wxl/graduate/dyslam_ws/src/dynamic_orb_slam2/src/Examples/RGB-D/TUM3.yaml" />
+  <param name="seq_path" value="/home/wxl/Data/TUM/rgbd_dataset_freiburg3_walking_xyz" />
+  <!-- rgbd_dataset_freiburg3_sitting_xyz
+  rgbd_dataset_freiburg3_sitting_halfsphere
+  rgbd_dataset_freiburg3_walking_static
+  rgbd_dataset_freiburg3_walking_rpy
+  rgbd_dataset_freiburg3_walking_xyz
+  rgbd_dataset_freiburg3_walking_halfsphere -->
+  <param name="associations_path" value="/home/wxl/Data/TUM/rgbd_dataset_freiburg3_walking_xyz/associations.txt" />
+  <param name="save_path" value="/home/wxl/graduate/dyslam_ws/src/dynamic_orb_slam2/results/w_xyz_yolact_01.txt" />
+  <param name="model_path" value="/home/wxl/graduate/dyslam_ws/src/dynamic_orb_slam2/ModelsCNN/" />
+  
+</node>
+<!-- /camera/rgb/image_raw -->
+<!-- /image_view/image_raw -->
+</launch>
+  
